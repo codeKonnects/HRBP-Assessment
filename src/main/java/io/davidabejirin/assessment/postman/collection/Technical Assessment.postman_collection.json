@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "0cc23081-e3de-4d15-9a09-52690bd6a812",
+		"name": "Technical Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21194513"
+	},
+	"item": [
+		{
+			"name": "Get score for all subjects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/all-result/?studentId=1&term=SECOND",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"all-result",
+						""
+					],
+					"query": [
+						{
+							"key": "studentId",
+							"value": "1"
+						},
+						{
+							"key": "term",
+							"value": "SECOND"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add score for student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"subjectId\" : \"{Put subjectId here}\",\n    \"term\" : \"{Put term here e.g FIRST}\",\n    \"classId\" : \"{Put classId here}\",\n    \"score\" : \"{put score here}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/score/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"score",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get score for specific subject",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/result?studentId=1&subjectId=2&schoolClass=A1&term=SECOND",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"result"
+					],
+					"query": [
+						{
+							"key": "studentId",
+							"value": "1"
+						},
+						{
+							"key": "subjectId",
+							"value": "2"
+						},
+						{
+							"key": "schoolClass",
+							"value": "A1"
+						},
+						{
+							"key": "term",
+							"value": "SECOND"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
